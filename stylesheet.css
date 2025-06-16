@@ -1,0 +1,879 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body
+{
+    background-color:hsl(209, 44%, 25%);
+}
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover{
+    color: #0ef;
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+    color: #f7f3f3;  
+
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+.home-content p{
+    font-size: 20px;
+}
+
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(245, 75, 8);
+    border-radius: 50%;
+    font-size: 30px;
+    color: rgb(253, 253, 253);
+    text-decoration: none;
+    margin: 0px 15px 30px 0;
+    animation: slideLeft is ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+.home-sci a:hover {
+  box-shadow: 
+    0 0 5px rgb(195, 44, 6),
+    0 0 25px cyan,
+    0 0 50px cyan,
+    0 0 100px cyan,
+    0 0 200px cyan;
+  color: black;
+}
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-box:hover {
+  box-shadow: 
+    0 0 5px cyan,
+    0 0 25px cyan,
+    0 0 50px cyan,
+    0 0 100px cyan,
+    0 0 200px cyan;
+  color: black;
+}
+
+#about{
+  padding-top: 140px;  /* Push content down */
+  padding-bottom: 100px;
+  text-align: center;  /* Center text horizontally */
+}
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Responsive stacking for small screens */
+  gap: 3rem;
+  padding: 60px 10%;
+  background-color: hsl(209, 44%, 25%);
+  color: white;
+  animation: slideUp 1s ease forwards;
+}
+
+.about-img img {
+  width: 280px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #0ef;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 60px;
+  text-align: center;
+}
+
+.about-text h2 span {
+  color: #0ef;
+}
+
+.about-text h4 {
+  font-size: 29px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.7;
+  margin: 15px 0 30px;
+  text-align: center;
+}
+
+.about-text p {
+  color: aliceblue;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+#services{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+    text-align: justify;
+}
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+    margin-top: 100px;
+}
+
+.sub-title span{
+    color: #0ef;
+}
+.container{
+    padding: 150px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top:50px;
+    text-align: center; 
+}
+
+.services-list div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7,
+                1px 1px 40px #0053b8f7
+}
+
+.services-list div i {
+    font-size: 30px;
+    margin-bottom: 30px;
+
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: #0d0c0c;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.read {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    box-shadow: 0 0 5px #0ef(230, 234, 235),
+    0 0 25px #0ef;
+}
+
+.read:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan;
+}
+.services-list div:hover{
+    transform: translateY(-10px);
+}
+
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+   /* margin-top: -100px;*/
+    color: aliceblue;
+    font-size: 50px;
+    
+}
+.bar{
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 10px;                  /* Space between icons */
+    margin-top: 0px;      /* Center horizontally */
+    flex-direction: column;    /* 🔥 This makes it vertical */ 
+    align-items: center;  
+
+}
+.technical-bars .bar{
+    margin-top: 40px;
+    margin-top: 0;
+}
+
+.technical-bars {
+  display: flex;
+  justify-content: center;   /* ✅ Center the whole row */
+  gap: 30px;                 /* ✅ Space between skills */
+  flex-wrap: wrap;           /* ✅ Responsive wrap if screen is small */
+  margin-top: 40px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+}
+
+.bar .info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #111;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0ef(255, 255, 255);
+}
+
+.technical-bars .bar:first-child{
+    margin-top: 0;
+}
+.technical-bars .bar:last-child{
+    margin-bottom: 0;
+}
+.technical-bars .bar .info{
+    margin-bottom: -70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    
+}
+
+.technical-bars .bar .info span{
+    font-size: 20px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+    display: inline-block;    /* 🔧 ensure both act like inline elements */
+    white-space: nowrap;
+    color: rgb(67, 209, 245)
+}
+
+.technical-bars .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100px;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1,0,0,5,1)forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.heading2{
+    text-align: center;
+    text-decoration: none;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: -100px;
+    color: aliceblue;
+    font-size: 50px;
+    padding-bottom:-300px;
+    margin-top: 80px;
+}
+
+.radial-bars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.radial-bar {
+  text-align: center;
+  color: white;
+}
+
+.radial-bar svg {
+  width: 120px;
+  height: 120px;
+  transform: rotate(-0deg); /* rotate so animation starts from top */
+}
+
+.radial-bar .background {
+  fill: none;
+  stroke: #333;
+  stroke-width: 10;
+}
+
+.radial-bar .progress {
+  fill: none;
+  stroke: #0ef;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: calc(283 - (283 * var(--percent)) / 100);
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.radial-bar .text {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.sub-title{
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: -150px;
+}
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#certificates{
+  padding-top: 80px;  /* Push content down */
+  padding-bottom: 100px;
+  text-align: center;  /* Center text horizontally */
+}
+
+.certificates {
+  padding: 50px 20px;
+  background-color: hsl(209, 44%, 25%);
+  color: white;
+}
+
+.certificate-container {
+  display: flex;
+  flex-wrap: wrap;         /* Allow to wrap if screen is small */
+  gap: 30px;               /* Space between cards */
+  justify-content: center; /* Center horizontally */
+}
+
+.certificate-card {
+  background-color: #1a1a1a;
+  border: 2px solid #0ef;
+  border-radius: 10px;
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.heading1{
+    text-decoration: none;
+    font-size: 60px;
+    color: white; /* This changes "My" */
+    margin-bottom: 20px;
+}
+
+.heading1 span {
+  color: #0ef;  /* Optional: keep "Skills" in a different color */
+}
+
+.certificate-card:hover {
+  transform: scale(1.05);
+}
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.certificate-card p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+/*.contact-text {
+  text-align: center;          /* Center text horizontally */
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;         /* Center content horizontally inside flex */
+  /*justify-content: center;     /* Center content vertically (if height is given) */
+/*}*/
+
+
+
+
+
+
+
+
+
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-left: 30px;
+    margin-top: 130px;
+}
+
+.contact-text h2{
+    font-size: 90px;
+    line-height: 1;
+    text-align: center;
+    color: #f7f3f3;
+    font-size: 60px;
+}
+
+.contact-text h2 span{
+    color: rgb(88, 198, 206);
+    font-size: 60px;
+}
+
+.contact-text h4{
+    margin: 15px 0;
+    color: rgb(228, 228, 228);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contact-text p{
+    color: rgb(251, 248, 248);
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.contact-list{
+    margin-bottom: 3rem;
+    font-size: 20px;
+    text-align: center;
+    color: #f7f3f3;
+}
+
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+.contact-list i{
+    display: inline-block;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .40s ease;
+}
+
+.contact-list li a:hover{
+    transform: scale(1.01)translateY(-5px);
+    color: #0ef;
+}
+
+.contact-icons i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft is ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.contact-icons i:hover{
+    background: #0ef;
+    color: #000;
+    box-shadow:  0 20px #0ef;
+}
+
+.contact-form form{
+    position:relative;
+}
+
+.contact-form form input,form textarea{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: #555557;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 220px;
+}
+
+.contact-form form.send{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef; 
+    border-radius: 40px;
+    font-size: 18px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    box-shadow: 0 0 5px #0ef(230, 234, 235),
+    0 0 25px #0ef;
+}
+.send {
+  background-color: #0ef;       /* Light blue */
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.send:hover {
+  background-color: #514d4f;     /* Darker blue */
+  color: white;
+  transform: scale(1.05);        /* Slight zoom */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.last-text p{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: rgb(246, 248, 248);
+    font-weight: 300;
+    margin-top: 70px;
+}
+
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+
+.top i{
+    color: #080505;
+    background: rgb(237, 7, 7);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+#skills{
+  padding-top: 170px;  /* Push content down */
+  padding-bottom: 80px;
+  text-align: center;  /* Center text horizontally */
+}
+#services{
+  padding-top: 60px;  /* Push content down */
+  padding-bottom: 100px;
+  text-align: center;  /* Center text horizontally */
+}
+.sub-title {
+  margin-bottom: 10px; /* reduce if it's large */
+}
+
+.heading1 {
+  margin-top: 0;       /* ensure this is not creating a gap */
+  margin-bottom: 10px; /* adjust this too */
+  font-size: 50px;
+}
+
+.skills {
+  padding-top: 20px;   /* lower the value if it's too big */
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes showText {
+  to {
+    opacity: 1;
+  }
+}
+
+.technical-bars .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.1s 1s linear forwards;
+  opacity: 0;
+}
+.technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate is 1s cubic-bezier(1,0,0,5,1) forwards;
+    transform:scaleX(0);
+    transform-origin: left;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* This will center the button */
+    text-align: justify;     /* This justifies the paragraph */
+    max-width: 700px;
+    margin: auto;
+}
+
+.about-text .btn-box {
+    margin-top: 20px;
+}
+
+
+.profile-pic {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px; /* Adjust size */
+    height: 300px;
+    border-radius: 50%; /* Makes it a circle */
+    overflow: hidden;
+    border: 3px solid #0ef;
+    box-shadow: 0 0 20px #0ef;
+    z-index: 10;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-sci i {
+  color: rgb(236, 225, 221); /* You can change this to black, white, etc. */
+  font-size: 30px;
+  display: inline-block;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(245, 250, 250);
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+}
+
+.btn-box {
+    display: inline-block;
+    margin: 20px auto;
+    background: #fff; /* or #0ef if you want blue */
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 28px;
+    text-align: center;
+    position: relative;
+    animation: slideUp is ease forwards;
+    
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px); /* Start from bottom */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);     /* End at normal position */
+    opacity: 1;
+  }
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    animation: slideRight 1s ease forwards; /* ✅ Animation added */
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 60px 10%;
+  opacity: 0; /* Start invisible */
+  animation: slideUp 1s ease forwards;
+  background-color:hsl(209, 44%, 25%);
+  color: white;
+  padding: 60px 10%;
+}
